@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> فوتون بلس - تفاصيل الكورس</title>
+    <link rel="shortcut icon" href="assets/images/logo.png">
+    <link rel="stylesheet" href="assets/lib/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="assets/lib/font-awesome/css/all.css">
+    <link rel="stylesheet" href="assets/lib/animate/aos.css">
+    <link rel="stylesheet" href="assets/lib/bootstrap/css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="assets/css/page.css">
+</head>
+
+<body>
+    <div class="curtain">
+        <div class="left-half"></div>
+        <div class="right-half"></div>
+        <img class="logo" src="assets/images/W-logo.png" alt="Logo">
+    </div>
+
+    <main class="content">
+        <header>
+            <nav class="navbar navbar-expand-md bg-body-tertiary" id="navbar">
+                <div class="container">
+                    <a class="navbar-brand" href="index.html">
+                        <img width="75" alt="logo" src="assets/images/logo.png" />
+                    </a>
+                    <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarText">
+                        <ul class="navbar-nav mx-auto mb-2 mb-lg-0 HeadernavbarText align-items-center">
+                            <li class="nav-item m-1">
+                                <a class="nav-link active" aria-current="page" href="index.html">الرئيسية</a>
+                            </li>
+                            <li class="nav-item m-1">
+                                <a class="nav-link" href="libraries.html">المكتبة</a>
+                            </li>
+                            <li class="nav-item m-1">
+                                <a class="nav-link" href="Courses.html">الدورات</a>
+                            </li>
+                            <li class="nav-item m-1">
+                                <a class="nav-link" href="Contact.html">تواصل معنا</a>
+                            </li>
+                        </ul>
+                        <ul class="navbar-nav mx-0 mb-2 mb-lg-0 align-items-center">
+                            <li class="nav-item m-1">
+                                <a class="btn btn-primary" href="Register.html">
+                                    انشاء حساب
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="pb-1" width="20" height="20"
+                                        viewBox="0 0 24 24">
+                                        <path fill="currentColor"
+                                            d="M19 8h-2v3h-3v2h3v3h2v-3h3v-2h-3zM4 8a3.91 3.91 0 0 0 4 4a3.91 3.91 0 0 0 4-4a3.91 3.91 0 0 0-4-4a3.91 3.91 0 0 0-4 4m6 0a1.91 1.91 0 0 1-2 2a1.91 1.91 0 0 1-2-2a1.91 1.91 0 0 1 2-2a1.91 1.91 0 0 1 2 2M4 18a3 3 0 0 1 3-3h2a3 3 0 0 1 3 3v1h2v-1a5 5 0 0 0-5-5H7a5 5 0 0 0-5 5v1h2z" />
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="nav-item m-1">
+                                <a class="btn btn-primary" href="login.html">
+                                    دخول
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="pb-1" width="20" height="20"
+                                        viewBox="0 0 24 24">
+                                        <path fill="currentColor" d="m13 16l5-4l-5-4v3H4v2h9z" />
+                                        <path fill="currentColor"
+                                            d="M20 3h-9c-1.103 0-2 .897-2 2v4h2V5h9v14h-9v-4H9v4c0 1.103.897 2 2 2h9c1.103 0 2-.897 2-2V5c0-1.103-.897-2-2-2" />
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <div style="height: 75px;"></div>
+
+
+        <section class="Courses py-5 mb-5">
+            <div class="container">
+                <form class="FilterForm position-relative">
+                    <div class="row">
+                        <div class="col-6 col-lg-4">
+                            <label>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24">
+                                    <path fill="currentColor"
+                                        d="M10 18a7.952 7.952 0 0 0 4.897-1.688l4.396 4.396l1.414-1.414l-4.396-4.396A7.952 7.952 0 0 0 18 10c0-4.411-3.589-8-8-8s-8 3.589-8 8s3.589 8 8 8m0-14c3.309 0 6 2.691 6 6s-2.691 6-6 6s-6-2.691-6-6s2.691-6 6-6" />
+                                </svg>
+                            </label>
+                            <input type="text" class="input-search" style="padding-right: 50px;" placeholder="ابحث...">
+                        </div>
+                        <div class="col-6 col-lg-2">
+                            <label></label>
+                            <select class="form-select select2C input-search bg-transparent shadow-none" aria-label="Default select example">
+                                <option selected="">فرز حسب</option>
+                                <option value="1">ترتيب حسب الاسم </option>
+                                <option value="2">ترتيب حسب السعر</option>
+                            </select>
+                        </div>
+                    </div>
+                </form>
+
+
+                <div class="row position-relative mt-5">
+                    <div class="col-12 col-md-6 col-lg-4 mb-4 pb-3">
+                        <div class="card border-0 h-100">
+                            <a href="Courses_Details.html">
+                                <img class="card-img-top" height="300"
+                                    src="./Alpha الدورات_files/7ee67395-9a10-4299-816c-5aeb21fe063d.png" alt="">
+                            </a>
+                            <div class="card-body text-center position-relative">
+                                <a href="Courses_Details.html" class="courses-tag text-end">sss</a>
+                                <a href="Instructors_Details.html" class="d-flex mb-3 align-items-center">
+                                    <img src="https://cdn.playnaas.com/d103c2a3-1778-c571-5f20-3a109969ed39/course-image/67972ac7-c830-48d0-a343-ec51ae21fe09.png"
+                                        class="rounded-circle border" width="30" height="30" alt="teacher" />
+                                    <span class="px-2 text-dark w-100 text-center">ثائر ابو شباك</span>
+                                </a>
+                                <a href="Courses_Details.html" class="card-title fs-5 fw-bold">اللغة
+                                    العربية الفروع الأكاديمية
+                                    والمهنية الفصل الأول 2008</a>
+                            </div>
+                            <div class="card-footer bg-white d-flex">
+                                <div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+                                        viewBox="0 0 256 256">
+                                        <path fill="currentColor"
+                                            d="M232 48h-72a40 40 0 0 0-32 16a40 40 0 0 0-32-16H24a8 8 0 0 0-8 8v144a8 8 0 0 0 8 8h72a24 24 0 0 1 24 24a8 8 0 0 0 16 0a24 24 0 0 1 24-24h72a8 8 0 0 0 8-8V56a8 8 0 0 0-8-8M96 192H32V64h64a24 24 0 0 1 24 24v112a39.8 39.8 0 0 0-24-8m128 0h-64a39.8 39.8 0 0 0-24 8V88a24 24 0 0 1 24-24h64Z" />
+                                    </svg>
+                                    1 دروس
+                                </div>
+                                <div class="ps-5 text-primary">
+                                    25
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 mb-4 pb-3">
+                        <div class="card border-0 h-100">
+                            <a href="Courses_Details.html">
+                                <img class="card-img-top" height="300"
+                                    src="./Alpha الدورات_files/7ee67395-9a10-4299-816c-5aeb21fe063d.png" alt="">
+                            </a>
+                            <div class="card-body text-center position-relative">
+                                <a href="Courses_Details.html" class="courses-tag text-end">sss</a>
+                                <a href="Instructors_Details.html" class="d-flex mb-3 align-items-center">
+                                    <img src="https://cdn.playnaas.com/d103c2a3-1778-c571-5f20-3a109969ed39/course-image/67972ac7-c830-48d0-a343-ec51ae21fe09.png"
+                                        class="rounded-circle border" width="30" height="30" alt="teacher" />
+                                    <span class="px-2 text-dark w-100 text-center">ثائر ابو شباك</span>
+                                </a>
+                                <a href="Courses_Details.html" class="card-title fs-5 fw-bold">اللغة
+                                    العربية الفروع الأكاديمية العربية الفروع الأكاديمية العربية الفروع الأكاديمية
+                                    والمهنية الفصل الأول 2008</a>
+                            </div>
+                            <div class="card-footer bg-white d-flex">
+                                <div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+                                        viewBox="0 0 256 256">
+                                        <path fill="currentColor"
+                                            d="M232 48h-72a40 40 0 0 0-32 16a40 40 0 0 0-32-16H24a8 8 0 0 0-8 8v144a8 8 0 0 0 8 8h72a24 24 0 0 1 24 24a8 8 0 0 0 16 0a24 24 0 0 1 24-24h72a8 8 0 0 0 8-8V56a8 8 0 0 0-8-8M96 192H32V64h64a24 24 0 0 1 24 24v112a39.8 39.8 0 0 0-24-8m128 0h-64a39.8 39.8 0 0 0-24 8V88a24 24 0 0 1 24-24h64Z" />
+                                    </svg>
+                                    1 دروس
+                                </div>
+                                <div class="ps-5 text-primary">
+                                    25
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 mb-4 pb-3">
+                        <div class="card border-0 h-100">
+                            <a href="Courses_Details.html">
+                                <img class="card-img-top" height="300"
+                                    src="./Alpha الدورات_files/7ee67395-9a10-4299-816c-5aeb21fe063d.png" alt="">
+                            </a>
+                            <div class="card-body text-center position-relative">
+                                <a href="Courses_Details.html" class="courses-tag text-end">sss</a>
+                                <a href="Instructors_Details.html" class="d-flex mb-3 align-items-center">
+                                    <img src="https://cdn.playnaas.com/d103c2a3-1778-c571-5f20-3a109969ed39/course-image/67972ac7-c830-48d0-a343-ec51ae21fe09.png"
+                                        class="rounded-circle border" width="30" height="30" alt="teacher" />
+                                    <span class="px-2 text-dark w-100 text-center">ثائر ابو شباك</span>
+                                </a>
+                                <a href="Courses_Details.html" class="card-title fs-5 fw-bold">اللغة
+                                    العربية الفروع الأكاديمية العربية الفروع الأكاديمية العربية الفروع الأكاديمية
+                                    والمهنية الفصل الأول 2008</a>
+                            </div>
+                            <div class="card-footer bg-white d-flex">
+                                <div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+                                        viewBox="0 0 256 256">
+                                        <path fill="currentColor"
+                                            d="M232 48h-72a40 40 0 0 0-32 16a40 40 0 0 0-32-16H24a8 8 0 0 0-8 8v144a8 8 0 0 0 8 8h72a24 24 0 0 1 24 24a8 8 0 0 0 16 0a24 24 0 0 1 24-24h72a8 8 0 0 0 8-8V56a8 8 0 0 0-8-8M96 192H32V64h64a24 24 0 0 1 24 24v112a39.8 39.8 0 0 0-24-8m128 0h-64a39.8 39.8 0 0 0-24 8V88a24 24 0 0 1 24-24h64Z" />
+                                    </svg>
+                                    1 دروس
+                                </div>
+                                <div class="ps-5 text-primary">
+                                    25
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 mb-4 pb-3">
+                        <div class="card border-0 h-100">
+                            <a href="Courses_Details.html">
+                                <img class="card-img-top" height="300"
+                                    src="./Alpha الدورات_files/7ee67395-9a10-4299-816c-5aeb21fe063d.png" alt="">
+                            </a>
+                            <div class="card-body text-center position-relative">
+                                <a href="Courses_Details.html" class="courses-tag text-end">sss</a>
+                                <a href="Instructors_Details.html" class="d-flex mb-3 align-items-center">
+                                    <img src="https://cdn.playnaas.com/d103c2a3-1778-c571-5f20-3a109969ed39/course-image/67972ac7-c830-48d0-a343-ec51ae21fe09.png"
+                                        class="rounded-circle border" width="30" height="30" alt="teacher" />
+                                    <span class="px-2 text-dark w-100 text-center">ثائر ابو شباك</span>
+                                </a>
+                                <a href="Courses_Details.html" class="card-title fs-5 fw-bold">اللغة
+                                    العربية الفروع الأكاديمية العربية الفروع الأكاديمية العربية الفروع الأكاديمية
+                                    والمهنية الفصل الأول 2008</a>
+                            </div>
+                            <div class="card-footer bg-white d-flex">
+                                <div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+                                        viewBox="0 0 256 256">
+                                        <path fill="currentColor"
+                                            d="M232 48h-72a40 40 0 0 0-32 16a40 40 0 0 0-32-16H24a8 8 0 0 0-8 8v144a8 8 0 0 0 8 8h72a24 24 0 0 1 24 24a8 8 0 0 0 16 0a24 24 0 0 1 24-24h72a8 8 0 0 0 8-8V56a8 8 0 0 0-8-8M96 192H32V64h64a24 24 0 0 1 24 24v112a39.8 39.8 0 0 0-24-8m128 0h-64a39.8 39.8 0 0 0-24 8V88a24 24 0 0 1 24-24h64Z" />
+                                    </svg>
+                                    1 دروس
+                                </div>
+                                <div class="ps-5 text-primary">
+                                    25
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 mb-4 pb-3">
+                        <div class="card border-0 h-100">
+                            <a href="Courses_Details.html">
+                                <img class="card-img-top" height="300"
+                                    src="./Alpha الدورات_files/7ee67395-9a10-4299-816c-5aeb21fe063d.png" alt="">
+                            </a>
+                            <div class="card-body text-center position-relative">
+                                <a href="Courses_Details.html" class="courses-tag text-end">sss</a>
+                                <a href="Instructors_Details.html" class="d-flex mb-3 align-items-center">
+                                    <img src="https://cdn.playnaas.com/d103c2a3-1778-c571-5f20-3a109969ed39/course-image/67972ac7-c830-48d0-a343-ec51ae21fe09.png"
+                                        class="rounded-circle border" width="30" height="30" alt="teacher" />
+                                    <span class="px-2 text-dark w-100 text-center">ثائر ابو شباك</span>
+                                </a>
+                                <a href="Courses_Details.html" class="card-title fs-5 fw-bold">اللغة
+                                    العربية الفروع الأكاديمية العربية الفروع الأكاديمية العربية الفروع الأكاديمية
+                                    والمهنية الفصل الأول 2008</a>
+                            </div>
+                            <div class="card-footer bg-white d-flex">
+                                <div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+                                        viewBox="0 0 256 256">
+                                        <path fill="currentColor"
+                                            d="M232 48h-72a40 40 0 0 0-32 16a40 40 0 0 0-32-16H24a8 8 0 0 0-8 8v144a8 8 0 0 0 8 8h72a24 24 0 0 1 24 24a8 8 0 0 0 16 0a24 24 0 0 1 24-24h72a8 8 0 0 0 8-8V56a8 8 0 0 0-8-8M96 192H32V64h64a24 24 0 0 1 24 24v112a39.8 39.8 0 0 0-24-8m128 0h-64a39.8 39.8 0 0 0-24 8V88a24 24 0 0 1 24-24h64Z" />
+                                    </svg>
+                                    1 دروس
+                                </div>
+                                <div class="ps-5 text-primary">
+                                    25
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 mb-4 pb-3">
+                        <div class="card border-0 h-100">
+                            <a href="Courses_Details.html">
+                                <img class="card-img-top" height="300"
+                                    src="./Alpha الدورات_files/7ee67395-9a10-4299-816c-5aeb21fe063d.png" alt="">
+                            </a>
+                            <div class="card-body text-center position-relative">
+                                <a href="Courses_Details.html" class="courses-tag text-end">sss</a>
+                                <a href="Instructors_Details.html" class="d-flex mb-3 align-items-center">
+                                    <img src="https://cdn.playnaas.com/d103c2a3-1778-c571-5f20-3a109969ed39/course-image/67972ac7-c830-48d0-a343-ec51ae21fe09.png"
+                                        class="rounded-circle border" width="30" height="30" alt="teacher" />
+                                    <span class="px-2 text-dark w-100 text-center">ثائر ابو شباك</span>
+                                </a>
+                                <a href="Courses_Details.html" class="card-title fs-5 fw-bold">اللغة
+                                    العربية الفروع الأكاديمية العربية الفروع الأكاديمية العربية الفروع الأكاديمية
+                                    والمهنية الفصل الأول 2008</a>
+                            </div>
+                            <div class="card-footer bg-white d-flex">
+                                <div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+                                        viewBox="0 0 256 256">
+                                        <path fill="currentColor"
+                                            d="M232 48h-72a40 40 0 0 0-32 16a40 40 0 0 0-32-16H24a8 8 0 0 0-8 8v144a8 8 0 0 0 8 8h72a24 24 0 0 1 24 24a8 8 0 0 0 16 0a24 24 0 0 1 24-24h72a8 8 0 0 0 8-8V56a8 8 0 0 0-8-8M96 192H32V64h64a24 24 0 0 1 24 24v112a39.8 39.8 0 0 0-24-8m128 0h-64a39.8 39.8 0 0 0-24 8V88a24 24 0 0 1 24-24h64Z" />
+                                    </svg>
+                                    1 دروس
+                                </div>
+                                <div class="ps-5 text-primary">
+                                    25
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 mb-4 pb-3">
+                        <div class="card border-0 h-100">
+                            <a href="Courses_Details.html">
+                                <img class="card-img-top" height="300"
+                                    src="./Alpha الدورات_files/7ee67395-9a10-4299-816c-5aeb21fe063d.png" alt="">
+                            </a>
+                            <div class="card-body text-center position-relative">
+                                <a href="Courses_Details.html" class="courses-tag text-end">sss</a>
+                                <a href="Instructors_Details.html" class="d-flex mb-3 align-items-center">
+                                    <img src="https://cdn.playnaas.com/d103c2a3-1778-c571-5f20-3a109969ed39/course-image/67972ac7-c830-48d0-a343-ec51ae21fe09.png"
+                                        class="rounded-circle border" width="30" height="30" alt="teacher" />
+                                    <span class="px-2 text-dark w-100 text-center">ثائر ابو شباك</span>
+                                </a>
+                                <a href="Courses_Details.html" class="card-title fs-5 fw-bold">اللغة
+                                    العربية الفروع الأكاديمية العربية الفروع الأكاديمية العربية الفروع الأكاديمية
+                                    والمهنية الفصل الأول 2008</a>
+                            </div>
+                            <div class="card-footer bg-white d-flex">
+                                <div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+                                        viewBox="0 0 256 256">
+                                        <path fill="currentColor"
+                                            d="M232 48h-72a40 40 0 0 0-32 16a40 40 0 0 0-32-16H24a8 8 0 0 0-8 8v144a8 8 0 0 0 8 8h72a24 24 0 0 1 24 24a8 8 0 0 0 16 0a24 24 0 0 1 24-24h72a8 8 0 0 0 8-8V56a8 8 0 0 0-8-8M96 192H32V64h64a24 24 0 0 1 24 24v112a39.8 39.8 0 0 0-24-8m128 0h-64a39.8 39.8 0 0 0-24 8V88a24 24 0 0 1 24-24h64Z" />
+                                    </svg>
+                                    1 دروس
+                                </div>
+                                <div class="ps-5 text-primary">
+                                    25
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <nav aria-label="...">
+                        <ul class="pagination justify-content-center">
+                            <li class="page-item disabled">
+                                <a class="page-link">Previous</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link shadow-none" href="#">1</a>
+                            </li>
+                            <li class="page-item active" aria-current="page">
+                                <a class="page-link shadow-none" href="#">2</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link shadow-none" href="#">3</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link shadow-none" href="#">Next</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </section>
+
+
+        <footer>
+            <div class="bg-footer1">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-md-6 col-lg-3 mb-3 text-center">
+                            <a href="#">
+                                <img src="assets/images/logo.png" class="img-fluid w-50" alt="" />
+                            </a>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-3 mb-3">
+                            <div class="d-flex flex-column align-items-center footer-listText">
+                                <b>روابط سريعة</b>
+                                <a href="index.html">الرئيسية</a>
+                                <a href="libraries.html">المكتبة</a>
+                                <a href="Courses.html">الدورات</a>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-3 mb-3">
+                            <div class="d-flex flex-column align-items-center footer-listText">
+                                <b>الدعم الفني</b>
+                                <a href="Contact.html">تواصل معنا</a>
+                                <a href="">سياسة الخصوصية</a>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-3 mb-3">
+                            <div class="d-flex flex-column align-items-center footer-listText">
+                                <b>تواصل معنا</b>
+                                <a href="#">
+                                    عمان - الارن
+                                    <span class="position-relative left-N20">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+                                            viewBox="0 0 24 24">
+                                            <path fill="currentColor"
+                                                d="M12 14c2.206 0 4-1.794 4-4s-1.794-4-4-4s-4 1.794-4 4s1.794 4 4 4m0-6c1.103 0 2 .897 2 2s-.897 2-2 2s-2-.897-2-2s.897-2 2-2" />
+                                            <path fill="currentColor"
+                                                d="M11.42 21.814a.998.998 0 0 0 1.16 0C12.884 21.599 20.029 16.44 20 10c0-4.411-3.589-8-8-8S4 5.589 4 9.995c-.029 6.445 7.116 11.604 7.42 11.819M12 4c3.309 0 6 2.691 6 6.005c.021 4.438-4.388 8.423-6 9.73c-1.611-1.308-6.021-5.294-6-9.735c0-3.309 2.691-6 6-6" />
+                                        </svg></span>
+                                </a>
+                                <a href="tel:0793211112">
+                                    0793211112
+                                    <span class="position-relative left-N20">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+                                            viewBox="0 0 24 24">
+                                            <path fill="currentColor"
+                                                d="M16.57 22a2 2 0 0 0 1.43-.59l2.71-2.71a1 1 0 0 0 0-1.41l-4-4a1 1 0 0 0-1.41 0l-1.6 1.59a7.55 7.55 0 0 1-3-1.59a7.62 7.62 0 0 1-1.59-3l1.59-1.6a1 1 0 0 0 0-1.41l-4-4a1 1 0 0 0-1.41 0L2.59 6A2 2 0 0 0 2 7.43A15.28 15.28 0 0 0 6.3 17.7A15.28 15.28 0 0 0 16.57 22M6 5.41L8.59 8L7.3 9.29a1 1 0 0 0-.3.91a10.12 10.12 0 0 0 2.3 4.5a10.08 10.08 0 0 0 4.5 2.3a1 1 0 0 0 .91-.27L16 15.41L18.59 18l-2 2a13.28 13.28 0 0 1-8.87-3.71A13.28 13.28 0 0 1 4 7.41zM20 11h2a8.81 8.81 0 0 0-9-9v2a6.77 6.77 0 0 1 7 7" />
+                                            <path fill="currentColor" d="M13 8c2.1 0 3 .9 3 3h2c0-3.22-1.78-5-5-5z" />
+                                        </svg></span>
+                                </a>
+                                <div class="footer-social d-flex">
+                                    <a href="#">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+                                            viewBox="0 0 24 24">
+                                            <path fill="currentColor"
+                                                d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4zm9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3" />
+                                        </svg>
+                                    </a>
+                                    <a href="#">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+                                            viewBox="0 0 24 24">
+                                            <path fill="currentColor"
+                                                d="M19.05 4.91A9.816 9.816 0 0 0 12.04 2c-5.46 0-9.91 4.45-9.91 9.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91c0-2.65-1.03-5.14-2.9-7.01m-7.01 15.24c-1.48 0-2.93-.4-4.2-1.15l-.3-.18l-3.12.82l.83-3.04l-.2-.31a8.264 8.264 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24c2.2 0 4.27.86 5.82 2.42a8.183 8.183 0 0 1 2.41 5.83c.02 4.54-3.68 8.23-8.22 8.23m4.52-6.16c-.25-.12-1.47-.72-1.69-.81c-.23-.08-.39-.12-.56.12c-.17.25-.64.81-.78.97c-.14.17-.29.19-.54.06c-.25-.12-1.05-.39-1.99-1.23c-.74-.66-1.23-1.47-1.38-1.72c-.14-.25-.02-.38.11-.51c.11-.11.25-.29.37-.43s.17-.25.25-.41c.08-.17.04-.31-.02-.43s-.56-1.34-.76-1.84c-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31c-.22.25-.86.85-.86 2.07c0 1.22.89 2.4 1.01 2.56c.12.17 1.75 2.67 4.23 3.74c.59.26 1.05.41 1.41.52c.59.19 1.13.16 1.56.1c.48-.07 1.47-.6 1.67-1.18c.21-.58.21-1.07.14-1.18s-.22-.16-.47-.28" />
+                                        </svg>
+                                    </a>
+                                    <a href="#">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+                                            viewBox="0 0 24 24">
+                                            <path fill="currentColor"
+                                                d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14c-.326-.043-1.557-.14-2.857-.14C11.928 2 10 3.657 10 6.7v2.8H7v4h3V22h4z" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-footer">
+                <p class="text-center p-3">
+                    <a href="#" class="text-white fw-bold">تصميم وتطوير سوار </a>
+                    <span class="text-white-50">جميع الحقوق محفوطة لمنصة فتون &copy; </span>
+                </p>
+            </div>
+        </footer>
+    </main>
+    <script src="assets/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/lib/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/lib/animate/aso.js"></script>
+    <script src="assets/js/index.js"></script>
+</body>
+
+</html>
