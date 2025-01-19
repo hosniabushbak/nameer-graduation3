@@ -88,11 +88,16 @@ class BusinessOwnersController extends Controller
         $data['owner'] = Owner::with('business')->findOrFail($id);
 
         $data['is_active'] = $data['owner']->status == 1;
-        $data['damagePhotos'] = $data['owner']->getMedia('business_damages')->map(function($media) {
-            return $media->getUrl();
-        })->toArray();
 
-        dd($data['damagePhotos']);
+        if ($data['owner']->business) {
+            $data['damagePhotos'] = $data['owner']->business->getMedia('damage_photos')->map(function($media) {
+                return $media->getUrl();
+            })->toArray();
+            dd($data['owner']->business);
+        } else {
+            $data['damagePhotos'] = [];
+        }
+
         return view('admin.business_owners.show', $data);
     }
     public function edit($id)

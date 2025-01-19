@@ -34,7 +34,6 @@ class Business extends Model implements HasMedia
 
     protected $casts = [
         'damage_photos' => 'array',
-        'licenses' => 'array',
     ];
 
     public function owner()
@@ -44,13 +43,14 @@ class Business extends Model implements HasMedia
 
     public function registerMediaCollections(): void
     {
-        $this->addMediaCollection('damage_photos')->storageDisk('public');
+        $this->addMediaCollection('damage_photos')->useDisk('public');
     }
 
     public function getDamagePhotosUrlsAttribute()
     {
-        return $this->getMedia('damage_photos')->map(function($media) {
+        $damagePhotos = $this->getMedia('damage_photos');
+        return $damagePhotos->map(function($media) {
             return $media->getUrl();
-        });
+        })->toArray();
     }
 }
