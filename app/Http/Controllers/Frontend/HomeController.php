@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Business;
 use App\Models\Category;
 use App\Models\Course;
+use App\Models\Faq;
 use App\Models\GuestQuestion;
 use App\Models\House;
 use App\Models\Instructor;
@@ -75,38 +76,37 @@ class HomeController extends Controller
         $dataR['owner_id'] = $createOwner->id;
         $createHouse = $createOwner->House()->create($dataR);
 
-        return redirect('/')
-            ->with('success', 'تم تسجيل طلبك بنجاح. سيتم التواصل معك قريباً');
+        return back()->with('success', 'تم تسجيل طلبك بنجاح. سيتم التواصل معك قريباً');
     }
 
     public function storeB (Request $request) {
 
 
-        $validator = Validator::make($request->all(), [
-            'id_number' => 'required|unique:owners,id_number',
-            'phone' => 'required|unique:owners,phone',
-            'email' => 'nullable|email|unique:owners,email',
-            'business_name' => 'required',
-            'commercial_registration' => 'required|unique:businesses',
-            'business_type' => 'required'
-        ], [
-            'id_number.required' => 'رقم الهوية مطلوب',
-            'id_number.unique' => 'رقم الهوية مسجل مسبقاً',
-            'phone.required' => 'رقم الجوال مطلوب',
-            'phone.unique' => 'رقم الجوال مسجل مسبقاً',
-            'email.email' => 'البريد الإلكتروني غير صحيح',
-            'email.unique' => 'البريد الإلكتروني مسجل مسبقاً',
-            'business_name.required' => 'اسم المنشأة مطلوب',
-            'commercial_registration.required' => 'السجل التجاري مطلوب',
-            'commercial_registration.unique' => 'السجل التجاري مسجل مسبقاً',
-            'business_type.required' => 'نوع النشاط التجاري مطلوب'
-        ]);
+//        $validator = Validator::make($request->all(), [
+//            'id_number' => 'required|unique:owners,id_number',
+//            'phone' => 'required|unique:owners,phone',
+//            'email' => 'nullable|email|unique:owners,email',
+//            'business_name' => 'required',
+//            'commercial_registration' => 'required|unique:businesses',
+//            'business_type' => 'required'
+//        ], [
+//            'id_number.required' => 'رقم الهوية مطلوب',
+//            'id_number.unique' => 'رقم الهوية مسجل مسبقاً',
+//            'phone.required' => 'رقم الجوال مطلوب',
+//            'phone.unique' => 'رقم الجوال مسجل مسبقاً',
+//            'email.email' => 'البريد الإلكتروني غير صحيح',
+//            'email.unique' => 'البريد الإلكتروني مسجل مسبقاً',
+//            'business_name.required' => 'اسم المنشأة مطلوب',
+//            'commercial_registration.required' => 'السجل التجاري مطلوب',
+//            'commercial_registration.unique' => 'السجل التجاري مسجل مسبقاً',
+//            'business_type.required' => 'نوع النشاط التجاري مطلوب'
+//        ]);
 
-        if ($validator->fails()) {
-            return redirect()->back()
-                ->withErrors($validator)
-                ->withInput();
-        }
+//        if ($validator->fails()) {
+//            return redirect()->back()
+//                ->withErrors($validator)
+//                ->withInput();
+//        }
 
 
         $dataOwner = $request->only([
@@ -139,9 +139,59 @@ class HomeController extends Controller
         $dataBusiness['owner_id'] = $createOwner->id;
         $createBusiness = $createOwner->business()->create($dataBusiness);
 
-        return redirect('/')
-            ->with('success', 'تم تسجيل طلبك بنجاح. سيتم التواصل معك قريباً');
+        if ($request->hasFile('damage_photos')) {
+            foreach ($request->file('damage_photos') as $photo) {
+                $createBusiness->addMedia($photo)
+                    ->toMediaCollection('damage_photos');
+            }
+        }
+dd(1);
+        return back()->with('success', 'تم تسجيل طلبك بنجاح. سيتم التواصل معك قريباً');
 
+    }
+
+    public function about()
+    {
+        $data['settings'] = new \App\Models\Setting();
+        return view('frontend.about', $data);
+    }
+
+    public function faq()
+    {
+        $data['settings'] = new \App\Models\Setting();
+        $data['faqs'] = Faq::where('status', 1)->get();
+        return view('frontend.faq', $data);
+    }
+
+    public function contact()
+    {
+        $data['settings'] = new \App\Models\Setting();
+        return view('frontend.contact', $data);
+    }
+
+    public function sendContact(Request $request)
+    {
+        $validator = Validator::make($request->all(), [
+            'name' => 'required|string|max:255',
+            'email' => 'required|email',
+            'subject' => 'required|string|max:255',
+            'message' => 'required|string'
+        ], [
+            'name.required' => 'الاسم مطلوب',
+            'email.required' => 'البريد الإلكتروني مطلوب',
+            'email.email' => 'البريد الإلكتروني غير صحيح',
+            'subject.required' => 'الموضوع مطلوب',
+            'message.required' => 'الرسالة مطلوبة'
+        ]);
+
+        if ($validator->fails()) {
+            return redirect()->back()
+                ->withErrors($validator)
+                ->withInput();
+        }
+
+        return redirect()->back()
+            ->with('success', 'تم إرسال رسالتك بنجاح. سنقوم بالرد عليك في أقرب وقت');
     }
 
 }

@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\BusinessOwnersController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\CourseController;
 use App\Http\Controllers\Admin\EmailController;
+use App\Http\Controllers\Admin\FaqController;
 use App\Http\Controllers\Admin\FileController;
 use App\Http\Controllers\Admin\GuestQuestionController;
 use App\Http\Controllers\Admin\HomeController;
@@ -58,6 +59,13 @@ Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => [ 'l
             Route::get('data/datatables', [BusinessOwnersController::class, 'datatable'])->name('datatable');
             Route::post('activate/{id}', [BusinessOwnersController::class, 'activate'])->name('activate');
             Route::post('bulk/delete', [BusinessOwnersController::class, 'bulkDestroy'])->name('bulk_delete');
+        });
+
+        Route::resource('faqs', FaqController::class);
+        Route::group(['prefix' => 'faqs', 'as' => 'faqs.'], function () {
+            Route::get('data/datatables', [FaqController::class, 'datatable'])->name('datatable');
+            Route::post('activate/{id}', [FaqController::class, 'activate'])->name('activate');
+            Route::post('bulk/delete', [FaqController::class, 'bulkDestroy'])->name('bulk_delete');
         });
 
         Route::get('email', [EmailController::class, 'index'])->name('email.index');

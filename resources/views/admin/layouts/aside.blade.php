@@ -84,6 +84,17 @@
                 </div>
 
                 <div class="menu-item">
+                    <a class="menu-link {{ $is_active == 'faqs' ? 'active' : '' }}" href="{{ route('admin.faqs.index') }}">
+        <span class="menu-icon">
+            <span class="svg-icon svg-icon-2">
+                <i class="fas fa-question-circle"></i>
+            </span>
+        </span>
+                        <span class="menu-title">الأسئلة الشائعة</span>
+                    </a>
+                </div>
+
+                <div class="menu-item">
                     <a class="menu-link {{ $is_active == 'settings' ? 'active' : '' }}" href="{{ route('admin.settings.index') }}">
        <span class="menu-icon">
            <span class="svg-icon svg-icon-2">
