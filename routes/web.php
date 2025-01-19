@@ -17,7 +17,8 @@ Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => [ 'l
     Auth::routes();
 
 
-    Route::get('/', [HomeController::class, 'index'])->name('home');
+    Route::get('/', [HomeController::class, 'index'])->name('index');
+    Route::get('/form', [HomeController::class, 'form'])->name('form');
     Route::post('/storeDamages', [HomeController::class, 'storeDamages'])->name('storeDamages');
     Route::post('/storeB', [HomeController::class, 'storeB'])->name('storeB');
 

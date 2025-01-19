@@ -38,7 +38,13 @@ class HomeController extends Controller
     public function index()
     {
         $data['settings'] = new \App\Models\Setting();
-        return view('frontend.home', $data);
+        return view('frontend.index', $data);
+    }
+
+    public function form()
+    {
+        $data['settings'] = new \App\Models\Setting();
+        return view('frontend.form', $data);
     }
 
     public function storeDamages (Request $request) {
